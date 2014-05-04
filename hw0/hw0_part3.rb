@@ -2,13 +2,13 @@ class BookInStock
   attr_accessor :isbn, :price
 
   def initialize(isbn, price)
-    raise ArgumentError if isbn == '' || price <= 0
-    
+    fail ArgumentError if isbn == '' || price <= 0
+
     @isbn = isbn
     @price = price
   end
-  
-  def price_as_string()
-      sprintf "$%.2f", @price
+
+  def price_as_string
+    format '$%.2f', @price
   end
 end
