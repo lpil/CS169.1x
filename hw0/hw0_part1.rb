@@ -11,6 +11,5 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(array, n)
-  comb = array.combination(2).to_a
-  comb.find { |e| e[0] + e[1] == n } ? true : false
+  !! array.combination(2).to_a.find { |e| e[0] + e[1] == n }
 end
