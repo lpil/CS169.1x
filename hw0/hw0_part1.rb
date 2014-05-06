@@ -7,8 +7,7 @@ def sum(array)
 end
 
 def max_2_sum(arr)
-  x = arr.sort.last(2)
-  0 + x[0].to_i + x[1].to_i
+  arr.sort.last(2).reduce(:+).to_i
 end
 
 def sum_to_n?(array, n)
