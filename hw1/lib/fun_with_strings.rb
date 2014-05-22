@@ -17,9 +17,7 @@ module FunWithStrings
   def count_words
     histogram = Hash.new(0)
     words.each do |word|
-      # unless word =~ /^\W+$/
       histogram[word.downcase] += 1
-      # end
     end
     histogram
   end
